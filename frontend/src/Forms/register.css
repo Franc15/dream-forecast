@@ -61,11 +61,13 @@ a {
 /* Login form styling */
 .login {
     background-color: var(--card-bg-color);
-    width: calc(100% / 4);
-    height: 75%;
+    width: 30%;
+    height: 80%;
     border-radius: 1rem;
     position: relative;
     overflow: hidden;
+    display: grid;
+    place-items: center;
 }
 
 .login form {
@@ -75,7 +77,7 @@ a {
     border-radius: 1rem;
     display: flex;
     flex-direction: column;
-    padding: 2rem;
+    padding: 1rem;
     z-index: 2;
 }
 
@@ -234,7 +236,7 @@ a {
 /* Links */
 .links {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     width: 80%;
     margin: 1rem auto;
@@ -244,17 +246,11 @@ a {
     font-size: .8rem;
     color: var(--dull-white-color);
     transition: all .3s ease-in-out;
+    text-align: center;
 }
 
 .links a:hover {
     transform: scale(1.05);
-}
-
-.links a:nth-child(1):hover {
-    color: var(--alt-white-color);
-}
-
-.links a:nth-child(2):hover {
     color: var(--main-theme-color);
 }
 
@@ -301,7 +297,7 @@ a {
 input[type="submit"] {
     width: 100%;
     height: 100%;
-    padding: .5rem .3rem;
+    padding: .8rem .3rem;
     border: none;
     outline: none;
     border-radius: 1rem;
@@ -309,17 +305,23 @@ input[type="submit"] {
     cursor: pointer;
 }
 
-@media all and (max-width: 1600px) {
-    .login {
-        height: 55%;
+@media all and (max-width: 1500px) {
+
+    .login{
+        width: 30%;
     }
+
+    .names, .login form .inputField, .links, .submit-btn{
+        width: 90%;
+    }
+
 }
 
-@media all and (max-width: 1100px) {
+@media all and (max-width: 1200px) {
 
     .login {
         width: 40%;
-        height: 60%;
+        height: 85%;
     }
 
     .links {
@@ -331,11 +333,11 @@ input[type="submit"] {
     }
 }
 
-@media all and (max-width: 700px) {
+@media all and (max-width: 800px) {
 
     .login {
-        width: 60%;
-        height: 60%;
+        width: 50%;
+        height: 85%;
     }
 
     .links {
@@ -344,5 +346,18 @@ input[type="submit"] {
 
     .links a {
         margin: .5rem 0;
+    }
+}
+
+@media all and (max-width:600px) {
+    .login{
+        width: 60%;
+        height: 95%;
+    }
+
+    .names{
+        width: 100%;
+        flex-direction: column;
+        gap: 0;
     }
 }

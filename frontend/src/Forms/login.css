@@ -61,7 +61,7 @@ a {
 /* Login form styling */
 .login {
     background-color: var(--card-bg-color);
-    width: calc(100% / 4);
+    width: 27%;
     height: 50%;
     border-radius: 1rem;
     position: relative;
@@ -75,7 +75,7 @@ a {
     border-radius: 1rem;
     display: flex;
     flex-direction: column;
-    padding: 2rem;
+    padding: 1rem;
     z-index: 2;
 }
 
@@ -295,7 +295,7 @@ a {
 input[type="submit"] {
     width: 100%;
     height: 100%;
-    padding: .5rem .3rem;
+    padding: .8rem .3rem;
     border: none;
     outline: none;
     border-radius: 1rem;
