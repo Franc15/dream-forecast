@@ -18,7 +18,11 @@
 </head>
 <body>
 
-    <div class="box">
+    <div class="login">
+
+        <span class="borderSpin">
+            <!-- Spining border goes here -->
+        </span>
 
         <form action="#" id="login">
 
@@ -29,13 +33,15 @@
 
                 <input type="text" name="emailAddress" id="emailAddress" required="required">
                 <span>Email Address</span>
+                <i> <!-- Input goes here --> </i>
 
             </div>
 
             <div class="inputField">
 
-                <input type="password" name="password" id="password required="required">
+                <input type="password" name="password" id="password" required="required">
                 <span>Password</span>
+                <i> <!-- Input goes here --> </i>
 
             </div>
 
@@ -48,7 +54,9 @@
             </div>
 
             <!-- Submit Button -->
-            <input type="submit" value="LOGIN">
+            <div class="submit-btn">
+                <input type="submit" value="LOGIN">
+            </div>
 
         </form>    
 
