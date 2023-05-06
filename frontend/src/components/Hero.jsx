@@ -62,7 +62,7 @@ function Hero() {
             </ParallaxLayer>
 
             <ParallaxLayer
-                sticky={{ start: 1, end: 2.9 }}
+                sticky={{ start: 1, end: 3.9 }}
                 style={{ display: 'flex', justifyContent: 'center', width: '100%', height: '50%' }}
             >
                 <img src={cat} />
@@ -104,8 +104,8 @@ function Hero() {
                     backgroundPosition: 'center',
                 }}
             >
-            <h1 className="text-6xl mx-auto w-[50%] mt-[10%] text-[#F4F4F6] font-black tracking-wide font-poppins">
-                Submit your dream description now and let Onyrix reveal your future</h1>
+            <h1 className="text-5xl mx-auto w-[50%] mt-[20%] text-[#F4F4F6] font-bold tracking-wider font-poppins">
+                Submit your dream description now and let Onyrix reveal your future...</h1>
                 <button type='button' className='font-poppins rounded-xl w-[20%] mt-16 ml-[50%] transform -translate-x-1/2 h-4 bg-yellow-500 p-8 text-[#F4F4F6] text-2xl flex justify-center items-center'> 
                 Try Onyrix</button>
             </ParallaxLayer>
