@@ -80,7 +80,7 @@ a {
 }
 
 /* Spin Effect */
-.login::before{
+.login::before {
     content: '';
     position: absolute;
     width: 100%;
@@ -88,12 +88,12 @@ a {
     top: -50%;
     left: -50%;
     background: linear-gradient(0deg,
-    transparent, transparent, var(--main-theme-color), var(--main-theme-color), var(--main-theme-color));
+            transparent, transparent, var(--main-theme-color), var(--main-theme-color), var(--main-theme-color));
     transform-origin: bottom right;
     animation: spin-effect 6s linear infinite;
 }
 
-.login::after{
+.login::after {
     content: '';
     position: absolute;
     width: 100%;
@@ -101,19 +101,19 @@ a {
     top: -50%;
     left: -50%;
     background: linear-gradient(0deg,
-    transparent, transparent, var(--main-theme-color), var(--main-theme-color), var(--main-theme-color));
+            transparent, transparent, var(--main-theme-color), var(--main-theme-color), var(--main-theme-color));
     transform-origin: bottom right;
     animation: spin-effect 6s linear infinite;
     animation-delay: -3s;
 }
 
-.borderSpin{
+.borderSpin {
     position: absolute;
     top: 0;
     inset: 0;
 }
 
-.borderSpin::before{
+.borderSpin::before {
     content: '';
     position: absolute;
     width: 100%;
@@ -121,13 +121,13 @@ a {
     top: -50%;
     left: -50%;
     background: linear-gradient(0deg,
-    transparent, transparent, var(--alt-white-color), var(--alt-white-color), var(--alt-white-color));
+            transparent, transparent, var(--alt-white-color), var(--alt-white-color), var(--alt-white-color));
     transform-origin: bottom right;
     animation: spin-effect 6s linear infinite;
     animation-delay: -1.5s;
 }
 
-.borderSpin::after{
+.borderSpin::after {
     content: '';
     position: absolute;
     width: 100%;
@@ -135,7 +135,7 @@ a {
     top: -50%;
     left: -50%;
     background: linear-gradient(0deg,
-    transparent, transparent, var(--alt-white-color), var(--alt-white-color), var(--alt-white-color));
+            transparent, transparent, var(--alt-white-color), var(--alt-white-color), var(--alt-white-color));
     transform-origin: bottom right;
     animation: spin-effect 6s linear infinite;
     animation-delay: -4.5s;
@@ -144,14 +144,14 @@ a {
 /* Animations */
 @keyframes spin-effect {
 
-    0%{
+    0% {
         transform: rotate(0deg);
     }
 
-    100%{
+    100% {
         transform: rotate(360deg);
     }
-    
+
 }
 
 .login form h2 {
@@ -159,6 +159,7 @@ a {
     font-size: 2.5rem;
     text-align: center;
     padding: 1rem 0;
+    text-transform: uppercase;
 }
 
 .login form .inputField {
@@ -167,6 +168,20 @@ a {
     margin: 1.5rem auto;
 }
 
+.names{
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: .5rem;
+}
+
+.names .inputField{
+    margin: 0;
+}
+
+.names .inputField input,
 .login form .inputField input {
     position: relative;
     width: 100%;
@@ -211,8 +226,8 @@ a {
     transition: all .5s ease-in-out;
 }
 
-.login form .inputField input:valid ~ i,
-.login form .inputField input:focus ~ i {
+.login form .inputField input:valid~i,
+.login form .inputField input:focus~i {
     height: 35px;
 }
 
@@ -226,7 +241,7 @@ a {
 }
 
 .links a {
-    font-size: .7rem;
+    font-size: .8rem;
     color: var(--dull-white-color);
     transition: all .3s ease-in-out;
 }
@@ -234,15 +249,6 @@ a {
 .links a:hover {
     transform: scale(1.05);
 }
-
-.links a:nth-child(1) {
-    text-align: start;
-}
-
-.links a:nth-child(2) {
-    text-align: end;
-}
-
 
 .links a:nth-child(1):hover {
     color: var(--alt-white-color);
@@ -283,7 +289,7 @@ a {
     border-radius: 1rem;
 }
 
-.submit-btn:hover{
+.submit-btn:hover {
     background-color: transparent;
     color: var(--alt-white-color);
 }
@@ -303,40 +309,40 @@ input[type="submit"] {
     cursor: pointer;
 }
 
-@media all and (max-width: 1600px){
-    .login{
+@media all and (max-width: 1600px) {
+    .login {
         height: 55%;
     }
 }
 
-@media all and (max-width: 1100px){
+@media all and (max-width: 1100px) {
 
-    .login{
+    .login {
         width: 40%;
         height: 60%;
     }
 
-    .links{
+    .links {
         flex-direction: column;
     }
 
-    .links a{
+    .links a {
         margin: .5rem 0;
     }
 }
 
-@media all and (max-width: 700px){
+@media all and (max-width: 700px) {
 
-    .login{
+    .login {
         width: 60%;
         height: 60%;
     }
 
-    .links{
+    .links {
         flex-direction: column;
     }
 
-    .links a{
+    .links a {
         margin: .5rem 0;
     }
 }
