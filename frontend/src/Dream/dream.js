@@ -2,7 +2,7 @@
 const interpreteBtn = document.getElementById('interpret');
 const dreamResponse = document.getElementById('dreamResponse');
 
-interpreteBtn.addEventListener('click', (e) =>{
+interpreteBtn.addEventListener('click', (e) => {
 
     e.preventDefault();
 
@@ -17,11 +17,15 @@ const moon = document.querySelector('.moon');
 const leftCloud = document.querySelector('.cloud1');
 const rightCloud = document.querySelector('.cloud2');
 
-window.addEventListener('scroll', () =>{
+window.addEventListener('scroll', () => {
 
-    let value = window.scrollY;
+    if (window.scrollY > 100) {
+        let value = window.scrollY;
 
-    leftCloud.style.left = value * -0.6 + 'px';
-    rightCloud.style.right = value * -0.6 + 'px';
+        leftCloud.style.left = value * -1 + 'px';
+        rightCloud.style.right = value * -1 + 'px';
+
+        moon.classList.toggle('toLeft');
+    }
 
 })

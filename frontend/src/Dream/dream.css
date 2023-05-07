@@ -40,7 +40,12 @@ body {
     background-color: var(--main-bg-color);
     color: var(--alt-white-color);
     font-family: 'Poppins', sans-serif;
+    background: url('../assets/Dreaming.jpg');
+    background-position: center;
+    background-size: cover;
+    background-position: fixed;
     overflow-x: hidden;
+    scroll-behavior: smooth;
 }
 
 a {
@@ -56,7 +61,12 @@ a {
     right: -10%;
     border-radius: 55%;
     box-shadow: 2px 2px 3rem var(--alt-white-color);
-    transition: all .3s ease-in-out;
+    transform: translateX(0);
+    transition: all .9s ease-in-out;
+}
+
+.toLeft{
+    transform: translateX(-400%);
 }
 
 /* Clouds */
