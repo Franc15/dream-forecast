@@ -18,6 +18,12 @@
 
     <!-- Stylesheet -->
     <link rel="stylesheet" href="./dream.css" type="text/css">
+
+    <!-- Typewriter JS Script -->
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+
+    <!-- JS -->
+    <script src="./dream.js" defer></script>
 </head>
 
 <body>
@@ -48,32 +54,26 @@
 
     <section id="dream">
 
-        <div class="dreamResponse">
+        <div id="dreamResponse" class="dreamResponse">
 
             <div class="responseTitle">
                 Here is what we gathered:
             </div>
 
             <div class="responseContent">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui temporibus perspiciatis vel, cum cumque
-                placeat
-                culpa voluptas nostrum? Commodi ullam, eos numquam optio, possimus ipsum accusamus deleniti hic ea ad
-                iste,
-                nobis sit. Tempore alias dolorum officiis quae expedita voluptas minima nobis labore illum, at provident
-                commodi soluta, quisquam obcaecati dignissimos ratione. Vitae in minus aspernatur ex harum? Maxime
-                debitis
-                repudiandae itaque iste blanditiis sint magni animi optio quia! Consequuntur fugit labore animi ut,
-                voluptatibus sit delectus officia nam quibusdam error voluptates minus blanditiis, ipsum eveniet
-                reprehenderit pariatur quidem odit quia iure officiis vero! Id velit laudantium quaerat consequatur
-                perferendis neque aperiam. Expedita ipsa aut fugit hic aperiam rerum eaque, similique pariatur voluptas
-                culpa sit alias architecto, beatae aliquam corrupti odio veniam officia aliquid laudantium nulla eius at
-                tenetur magni. Nulla ipsa est odio explicabo dicta natus, quis iure ipsam nostrum itaque suscipit
-                delectus
-                nam autem aliquam ratione fugiat in.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio recusandae consequatur animi. Unde
+                dolor harum, possimus hic expedita eligendi, at placeat minima doloremque, optio delectus blanditiis
+                odit ducimus. Vel natus asperiores quae provident nisi autem, laudantium labore numquam id commodi sed
+                recusandae odit illo aperiam similique qui nobis quia nam sequi veniam corrupti aliquid omnis tempora
+                quasi. Incidunt laudantium dolores aut ab eos, quam ut, deserunt adipisci expedita iure, provident id
+                sapiente accusantium voluptates ipsa exercitationem alias! Ratione temporibus quaerat amet cumque
+                similique officia minus quam maxime, saepe magni dolores in veritatis porro possimus? Eveniet, ab
+                delectus! Modi, fugiat consequuntur!
             </div>
 
             <div class="responseMood">
-                <span class="special">Your mood:</span> <span class="emoji">😅</span>
+                <span class="special">Your mood: </span> (<span class="mood"> nervous </span>) <span
+                    class="emoji">😅</span>
             </div>
 
         </div>
@@ -93,7 +93,7 @@
                 </div>
 
                 <!-- Submit Button -->
-                <div class="interpret-btn">
+                <div id="interpret" class="interpret-btn">
                     <input type="submit" value="Interpret">
                 </div>
 

@@ -62,9 +62,9 @@ a {
 .title, .responseTitle {
     color: var(--main-theme-color);
     text-transform: uppercase;
-    font-size: 3rem;
+    font-size: 4rem;
     text-align: center;
-    margin: 1rem 0;
+    margin: 5rem 0;
 }
 
 .special {
@@ -89,17 +89,33 @@ a {
     justify-content: center;
 }
 
-.dreamResponse {
+.dreamResponse{
+    display: none;
+}
+
+.show {
+    transition: all .4s ease-in-out;
+    display: block;
     width: 40%;
     margin: 0 auto;
     background-color: var(--card-bg-color);
     border-radius: 1rem;
-    padding: 2rem 1rem;
-    display: none;
+    padding: 1rem 1rem;
+    margin-bottom: 3rem;
+    box-shadow: 1px 1px 2rem var(--main-theme-color);
+}
+
+.dreamResponse.show:hover{
+    box-shadow: 2px 2px 5rem var(--main-theme-color);
+}
+
+.responseTitle{
+    font-size: 2rem;
+    margin: 2rem;
 }
 
 .responseContent {
-    padding: 2rem 3rem;
+    padding: 1rem 3rem;
 }
 
 .responseMood {
@@ -108,6 +124,12 @@ a {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.mood{
+    color: var(--alt-white-color);
+    font-weight: 600;
+    padding: 2px;
 }
 
 .emoji{
@@ -163,7 +185,6 @@ form{
 
 .interpret-btn {
     position: relative;
-    width: 20%;
     margin: 1rem auto;
     outline: none;
     border: none;
@@ -171,8 +192,9 @@ form{
     cursor: pointer;
     border-radius: 1rem;
     font-weight: 600;
-    transition: all .4s ease-in;
+    transition: all .3s ease-in;
     overflow: hidden;
+    padding: .1rem .5rem;
 }
 
 .interpret-btn:active {
@@ -188,7 +210,7 @@ form{
     height: 100%;
     z-index: -1;
     background-color: var(--main-theme-color);
-    transition: all .4s ease-out;
+    transition: all .3s ease-out;
     border-radius: 1rem;
 }
 
