@@ -82,7 +82,7 @@ function Hero() {
             </ParallaxLayer>
 
             <ParallaxLayer
-                sticky={{ start: 1, end: 3.9 }}
+                sticky={{ start: 1, end: 3.7 }}
                 style={{ display: 'flex', justifyContent: 'center', }}
             >
                 <img src={cat} className='flex justify-center h-[30%] lg:h-[50%]' />
