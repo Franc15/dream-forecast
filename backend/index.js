@@ -8,7 +8,7 @@ const { Configuration, OpenAIApi } = require("openai");
 
 const app = express();
 
-const port  = 8000;
+const port  = process.env.PORT || 5000;
 
 app.use(cors({ origin: "*", credentials: true }));
 app.use(bodyParser.json());
@@ -18,22 +18,19 @@ const configuration = new Configuration({
   });
 const openai = new OpenAIApi(configuration);
 
-app.get('/', (req, res) => {
+app.get('/api', (req, res) => {
   res.setHeader('Content-Type', 'application/json');
-  res.status(200).json({ message: 'Hello World' });
+  res.status(200).json({ message: 'Welcome to Orynix API' });
 });
 
-app.get('/fun', (req, res) => {
-    res.status(200).json({message: 'Have fun!'});
-});
 
-app.post('/test', (req, res) => {
+app.post('/api/test', (req, res) => {
     console.log(req.body);
     res.send(req.body);
 })
 
 // POST request endpoint
-app.post("/ask", async (req, res) => {
+app.post("/api/ask", async (req, res) => {
     // getting prompt question from request
     const prompt = req.body.prompt;
 
@@ -66,9 +63,88 @@ app.post("/ask", async (req, res) => {
   });
 
 // TODO: endpoint to save the created userto the database
+app.post('/api/user/register', (req, res) => {
+    try {
+        const firstname = req.body.firstname;
+        const lastname = req.body.lastname;
+        const username = req.body.username;
+        const email = req.body.email;
+
+        const sql = "INSERT INTO users (firstname, lastname, username, email) VALUES (?, ?, ?, ?)";
+        dbConnection.query(sql, [firstname, lastname, username, email], (err, result) => {
+            if (err) throw err;
+            console.log("1 record inserted");
+        });
+        res.json({message: 'User registered successfully!', success: true});
+    } catch (error) {
+        console.log(error.message);
+        return res.json({
+            success: false,
+            message: 'user creation failure'
+        });
+    }
+});
+
+
 // TODO: endpoint to retrieve user information from database
+app.get('/api/user/:username', (req, res) => {
+    try {
+        const username = req.params.username;
+        const sql = "SELECT * FROM users WHERE username = ?";
+        dbConnection.query(sql, [username], (err, result) => {
+            if (err) throw err;
+            console.log(result);
+            res.json({message: 'User retrieved successfully!', success: true, data: result});
+        });
+    } catch (error) {
+        console.log(error.message);
+        return res.json({
+            success: false,
+            message: 'error on finding user'
+        });
+    }
+});
+
 // TODO: endpoint to save dream description in database
+app.post('/api/dream', (req, res) => {
+    try {
+        const username = req.body.username;
+        const dream = req.body.dream;
+        const mood = req.body.mood;
+        const sql = "INSERT INTO dreams (username, dream, mood) VALUES (?, ?, ?)";
+        dbConnection.query(sql, [username, dream, mood], (err, result) => {
+            if (err) throw err;
+            console.log("1 record inserted");
+        });
+        res.json({message: 'Dream saved successfully!', success: true});
+    } catch (error) {
+        console.log(error.message);
+        return res.json({
+            success: false,
+            message: error.message
+        });
+    }
+});
+
+
 // TODO: endpoint to retrieve list of previously predicted dreams
+app.get('/api/dreams/:username', (req, res) => {
+    try {
+        const username = req.params.username;
+        const sql = "SELECT * FROM dreams WHERE username = ?";
+        dbConnection.query(sql, [username], (err, result) => {
+            if (err) throw err;
+            console.log(result);
+            res.json({message: 'dreams retrieved success', success: true, data: result});
+        });
+    } catch (error) {
+        console.log(error.message);
+        return res.json({
+            success: false,
+            message: 'could not retrieve dreams'
+        });
+    }
+});
 
 app.listen(port, () => {
   console.log(`Server listening at http://localhost:${port}`);
