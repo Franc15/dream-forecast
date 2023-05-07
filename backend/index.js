@@ -2,6 +2,7 @@ require("dotenv").config();
 const express = require("express");
 const cors = require("cors");
 const bodyParser = require('body-parser');
+var dbConnection = require('./lib/db');
 // import modules from OpenAI library
 const { Configuration, OpenAIApi } = require("openai");
 
@@ -63,6 +64,11 @@ app.post("/ask", async (req, res) => {
         });
     }
   });
+
+// TODO: endpoint to save the created userto the database
+// TODO: endpoint to retrieve user information from database
+// TODO: endpoint to save dream description in database
+// TODO: endpoint to retrieve list of previously predicted dreams
 
 app.listen(port, () => {
   console.log(`Server listening at http://localhost:${port}`);
