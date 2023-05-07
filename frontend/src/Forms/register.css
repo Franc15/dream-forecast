@@ -53,6 +53,7 @@ body {
     place-items: center;
     color: var(--alt-white-color);
     overflow: hidden;
+    font-family: 'Poppins', sans-serif;
 }
 
 a {
