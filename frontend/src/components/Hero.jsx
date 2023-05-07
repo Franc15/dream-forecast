@@ -15,7 +15,7 @@ function Hero() {
 
   async function onSubmit(e) {
     e.preventDefault();
-    const response = await fetch("https://booleanpundits.maurice.webcup.hodi.host/api/ask", {
+    const response = await fetch("https://localhost:5000/api/ask", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -31,7 +31,7 @@ function Hero() {
         <>
         <Parallax pages={5} ref={ref} style={{ backgroundColor: '#02040F' }}>
             <ParallaxLayer offset={0} sticky={{ start: 0, end: 1 }}>
-                <Navbar />
+                <Navbar setShowModal={setShowModal} />
             </ParallaxLayer>
             <ParallaxLayer
                 offset={0}
@@ -142,7 +142,7 @@ function Hero() {
                 offset={4.6}
                 speed={0.2}
             >
-                <button type='button' className='font-poppins rounded-xl w-[50%] lg:w-[20%] mt-0 lg:mt-16 ml-[50%] transform -translate-x-1/2 bg-[#f18f01] hover:bg-yellow-500 p-2 lg:p-4 text-[#F4F4F6] text-2xl flex justify-center items-center'>
+                <button type='button' onClick={() => setShowModal(false)} className='font-poppins rounded-xl w-[50%] lg:w-[20%] mt-0 lg:mt-16 ml-[50%] transform -translate-x-1/2 bg-[#f18f01] hover:bg-yellow-500 p-2 lg:p-4 text-[#F4F4F6] text-2xl flex justify-center items-center'>
                     Try Now</button>
             </ParallaxLayer>
 
