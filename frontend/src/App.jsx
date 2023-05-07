@@ -1,6 +1,7 @@
 import './App.css'
 import Home from './pages/index'
 import Login from './pages/login'
+import Register from './pages/register'
 import {
   BrowserRouter as Router,
   Routes,
@@ -14,6 +15,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/login" element={<Login />} />
+        <Route path="/register" element={<Register />} />
       </Routes>
     </Router>
   )

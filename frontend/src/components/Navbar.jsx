@@ -7,7 +7,7 @@ function Navbar() {
             <div className="w-24 h-24 bg-[url('./assets/logo.png')] bg-center bg-contain bg-no-repeat"></div>
             <div className='flex w-[60%] lg:w-[20%] justify-between text-[#F4F4F6] font-poppins items-center text-sm md:text-base'>
                 <Link to="/login">Log In</Link>
-                <div>Sign Up</div>
+                <Link to="/register">Sign Up</Link>
                 <button type='button' className='rounded-lg w-[40%] h-8 bg-[#f18f01] hover:bg-yellow-500 text-[#F4F4F6] flex justify-center items-center'>
                     Try Now</button>
             </div>

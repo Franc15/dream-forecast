@@ -1,12 +1,11 @@
 import React from 'react'
-import styles from'../App.css'
 
 function Login() {
 
   return (
-    <div className={styles.login}>
+    <div className="login">
 
-        <span className={styles.borderSpin}>
+        <span className="borderSpin">
             {/* Spining border goes here */}
         </span>
 
@@ -15,7 +14,7 @@ function Login() {
             <h2>LOGIN</h2>
 
             {/* Input Fields */}
-            <div className={styles.inputField}>
+            <div className="inputField">
 
                 <input type="email" name="emailAddress" id="emailAddress" required="required"/>
                 <span>Email Address</span>
@@ -24,7 +23,7 @@ function Login() {
 
             </div>
 
-            <div className={styles.inputField}>
+            <div className="inputField">
 
                 <input type="password" name="password" id="password" required="required" />
                 <span>Password</span>
@@ -33,7 +32,7 @@ function Login() {
             </div>
 
             {/* Links */}
-            <div className={styles.links}>
+            <div className="links">
 
                 <a href="https://www.google.com">Forgot Password?</a>
                 <a href="./register.html">Create a new account</a>
@@ -41,7 +40,7 @@ function Login() {
             </div>
 
             {/* Submit Button */}
-            <div className={styles.submit-btn}>
+            <div className="submit-btn">
                 <input type="submit" value="LOGIN" />
             </div>
 
