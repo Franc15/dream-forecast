@@ -40,11 +40,65 @@ body {
     background-color: var(--main-bg-color);
     color: var(--alt-white-color);
     font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
 }
 
 a {
     text-decoration: none;
 }
+
+/* Moon */
+.moon{
+    aspect-ratio: 1/1;
+    position: fixed;
+    width: 30rem;
+    top: -10%;
+    right: -10%;
+    border-radius: 55%;
+    box-shadow: 2px 2px 3rem var(--alt-white-color);
+    transition: all .3s ease-in-out;
+}
+
+/* Clouds */
+.cloud1{
+    position: fixed;
+    z-index: 20;
+    aspect-ratio: 16 / 9;
+    width: 30rem;
+    top: 10%;
+    left: 20%;
+    animation: bounce 2s infinite linear alternate;
+    transition: all .3s ease-in-out;
+}
+
+.cloud2{
+    position: fixed;
+    z-index: 20;
+    aspect-ratio: 16 / 9;
+    width: 30rem;
+    bottom: 10%;
+    right: 20%;
+    animation: bounce 3s infinite linear alternate;
+    transition: all .3s ease-in-out;
+}
+
+/* Bounce Effect */
+@keyframes bounce {
+
+    0% {
+        transform: translateY(-10%);
+    }
+
+    50%{
+        transform: translateY(10%);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+    
+}
+
 
 /* Introduction Section */
 #intro{

@@ -10,3 +10,18 @@ interpreteBtn.addEventListener('click', (e) =>{
     dreamResponse.classList.add('show');
 
 });
+
+
+// Parallax Effect
+const moon = document.querySelector('.moon');
+const leftCloud = document.querySelector('.cloud1');
+const rightCloud = document.querySelector('.cloud2');
+
+window.addEventListener('scroll', () =>{
+
+    let value = window.scrollY;
+
+    leftCloud.style.left = value * -0.6 + 'px';
+    rightCloud.style.right = value * -0.6 + 'px';
+
+})
