@@ -1,4 +1,5 @@
 import './App.css'
+import Modal from './components/Modal'
 import Home from './pages/index'
 import Login from './pages/login'
 import Register from './pages/register'
