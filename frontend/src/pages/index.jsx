@@ -8,6 +8,7 @@ function index() {
     return (
         <>
             <Hero />
+            
         </>
     )
 }
