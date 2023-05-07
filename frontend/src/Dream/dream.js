@@ -25,7 +25,9 @@ window.addEventListener('scroll', () => {
         leftCloud.style.left = value * -1 + 'px';
         rightCloud.style.right = value * -1 + 'px';
 
-        moon.classList.toggle('toLeft');
+        moon.classList.add('toLeft');
+    }else{
+        moon.classList.remove('toLeft');
     }
 
 })
