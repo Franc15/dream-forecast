@@ -1,10 +1,12 @@
 // Display the dream response
 const interpreteBtn = document.getElementById('interpret');
 const dreamResponse = document.getElementById('dreamResponse');
+var input = document.getElementById('dreamTextArea').value;
 
 interpreteBtn.addEventListener('click', (e) => {
 
     e.preventDefault();
+    alert(`Your dream: ${input}`);
 
     // Show the dream response
     dreamResponse.classList.add('show');

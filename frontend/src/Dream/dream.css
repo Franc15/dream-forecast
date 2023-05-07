@@ -7,6 +7,7 @@
 
 /* Global Styles */
 :root {
+    --mood-color: orange;
     --main-bg-color: #02020f;
     --main-theme-color: #f18f01;
     --alt-white-color: #f4f4f6;
@@ -23,7 +24,7 @@
 }
 
 ::-webkit-scrollbar-track {
-    margin-block: .3rem;
+    background-color: var(--main-bg-color);
 }
 
 ::-webkit-scrollbar-thumb {
@@ -41,11 +42,12 @@ body {
     color: var(--alt-white-color);
     font-family: 'Poppins', sans-serif;
     background: url('../assets/Dreaming.jpg');
-    background-position: center;
     background-size: cover;
-    background-position: fixed;
+    background-repeat: no-repeat;
     overflow-x: hidden;
     scroll-behavior: smooth;
+    max-width: 1600px;
+    margin: 0 auto;
 }
 
 a {
@@ -63,6 +65,7 @@ a {
     box-shadow: 2px 2px 3rem var(--alt-white-color);
     transform: translateX(0);
     transition: all .9s ease-in-out;
+    z-index: -1;
 }
 
 .toLeft {
@@ -121,6 +124,7 @@ a {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding: 1rem 1.5rem;
 }
 
 .title,
@@ -129,7 +133,7 @@ a {
     text-transform: uppercase;
     font-size: 4rem;
     text-align: center;
-    margin: 5rem 0;
+    margin: 4rem 0;
 }
 
 .special {
@@ -159,19 +163,20 @@ a {
 }
 
 .show {
-    transition: all .4s ease-in-out;
+    transition: all .3s ease-in-out;
     display: block;
     width: 40%;
     margin: 0 auto;
-    background-color: var(--card-bg-color);
+    background-color: var(--main-bg-color);
     border-radius: 1rem;
     padding: 1rem 1rem;
     margin-bottom: 3rem;
-    box-shadow: 1px 1px 2rem var(--main-theme-color);
+    box-shadow: 1px 1px 3rem var(--mood-color);
+    cursor: pointer;
 }
 
 .dreamResponse.show:hover {
-    box-shadow: 2px 2px 5rem var(--main-theme-color);
+    box-shadow: 2px 2px 5rem var(--mood-color);
 }
 
 .responseTitle {
@@ -191,8 +196,12 @@ a {
     justify-content: center;
 }
 
+.responseMood .special{
+    font-weight: 500;
+}
+
 .mood {
-    color: var(--alt-white-color);
+    color: var(--mood-color);
     font-weight: 600;
     padding: 2px;
 }
@@ -319,6 +328,18 @@ input[type="submit"] {
     }
 }
 
+@media all and (max-width: 1100px) {
+
+    .dreamResponse{
+        width: 70%;
+    }
+
+    .responseContent{
+        text-align: center;
+    }
+}
+
+
 @media all and (max-width:600px){
     /* Moon */
     .moon {
@@ -333,7 +354,36 @@ input[type="submit"] {
     .cloud2 {
         bottom: 0;
     }
-    .title{
-        font-size: 2.5rem;
+
+    .dreamResponse{
+        width: 80%;
+    }
+
+    .responseTitle {
+        font-size: 1.5rem;
+        margin: 1.5rem;
+    }
+    
+    .responseContent {
+        padding: 1rem 1.5rem;
+    }
+    
+    .responseMood {
+        color: var(--main-theme-color);
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .mood {
+        color: var(--mood-color);
+        font-weight: 600;
+        padding: 2px;
+    }
+    
+    .emoji {
+        font-size: 1.5rem;
+        margin: .5rem;
     }
 }
