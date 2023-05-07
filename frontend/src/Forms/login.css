@@ -52,10 +52,63 @@ body {
     display: grid;
     place-items: center;
     color: var(--alt-white-color);
+    overflow: hidden;
 }
 
 a {
     text-decoration: none;
+}
+
+/* Moon */
+.moon{
+    aspect-ratio: 1/1;
+    position: absolute;
+    width: 30rem;
+    top: -10%;
+    right: -10%;
+    border-radius: 55%;
+    box-shadow: 2px 2px 3rem var(--alt-white-color);
+    transition: all .3s ease-in-out;
+}
+
+/* Clouds */
+.cloud1{
+    position: absolute;
+    z-index: 20;
+    aspect-ratio: 16 / 9;
+    width: 30rem;
+    top: 10%;
+    left: 20%;
+    animation: bounce 2s infinite linear alternate;
+    transition: all .3s ease-in-out;
+}
+
+.cloud2{
+    position: absolute;
+    z-index: 20;
+    aspect-ratio: 16 / 9;
+    width: 30rem;
+    bottom: 10%;
+    right: 20%;
+    animation: bounce 3s infinite linear alternate;
+    transition: all .3s ease-in-out;
+}
+
+/* Bounce Effect */
+@keyframes bounce {
+
+    0% {
+        transform: translateY(-10%);
+    }
+
+    50%{
+        transform: translateY(10%);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+    
 }
 
 /* Login form styling */
@@ -305,12 +358,73 @@ input[type="submit"] {
 }
 
 @media all and (max-width: 1600px) {
+    .moon{
+        top: -10%;
+        right: -10%;
+    }
+
+    .cloud1{
+        left: 13%;
+    }
+
+    .cloud2{
+        right: 13%;
+    }
+
     .login {
         height: 55%;
     }
 }
 
+@media all and (max-width: 1500px) {
+    .moon{
+        top: -13%;
+        right: -13%;
+    }
+
+    .cloud1{
+        left: 11%;
+    }
+
+    .cloud2{
+        right: 11%;
+    }
+}
+
+@media all and (max-width: 1300px) {
+    .moon{
+        top: -15%;
+        right: -15%;
+    }
+
+    .cloud1{
+        left: 9%;
+    }
+
+    .cloud2{
+        right: 9%;
+    }
+}
+
 @media all and (max-width: 1100px) {
+
+    .moon{
+        top: -16%;
+        right: -16%;
+        width: 27rem;
+    }
+
+    .cloud1{
+        width: 25rem;
+        top: 3%;
+        left: 0;
+    }
+
+    .cloud2{
+        width: 25rem;
+        bottom: 3%;
+        right: 0;
+    }
 
     .login {
         width: 40%;
